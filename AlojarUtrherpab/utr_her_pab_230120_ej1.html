@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Examen 23-01-2020 / utrherpab / Ej1</title>
+    <link rel="stylesheet" href="styleUtrherpab.css">
+</head>
+
+<body>
+    <header class="body__headerUtrherpab">
+        <div class="centradoH">
+            <h1>Inicio del examen 23-01-2020. Alumno: utrherpab</h1>
+        </div>
+        <figure>
+            <img src="img/Recurso1.png" class="imagenResponsivaCentradaUtrHerPab" alt="Imagen editada por utrherpab"
+                title="Imagen editada por utrherpab">
+            <figcaption class="centradoH">
+                Imagen editada por utrherpab
+            </figcaption>
+        </figure>
+
+        <div class="centradoH">
+            <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/"><img alt="Licencia Creative Commons"
+                    style="border-width:0" src="https://i.creativecommons.org/l/by-nc/4.0/88x31.png" /></a><br />Esta
+            obra está bajo una <a rel="license" href="http://creativecommons.org/licenses/by-nc/4.0/">Licencia Creative
+                Commons Atribución-NoComercial 4.0 Internacional</a>
+        </div>
+    </header>
+    <section>
+        <div class="contenedorGridUtrherpab">
+            <div class="contenedorGridUtrherpab__UtrherpabContenedor2ConBordeVerde">
+                <picture class="contenedorGridUtrherpab__UtrherpabContenedor2ConBordeVerde__imgResponsivaUtrherpab">
+                    <source media="(min-width: 500px)" srcset="./img/Recurso2.jpg">
+                    <source media="(min-width: 400px)" srcset="./img/Recurso3.jpg">
+                    <img src="./img/Recurso4.jpg" alt="Imagen retrocompatible" style="width:auto;">
+                </picture>
+            </div>
+            <div class="contenedorGridUtrherpab__UtrherpabContenedor2ConBordeAzul">
+                <button onclick="cuantosClicks()">
+                    <img src="img/Recurso5.png" class="contenedorGridUtrherpab__UtrherpabContenedor2ConBordeAzul__imgResponsivaUtrherpab">
+                </button>
+
+                <script> 
+                    function cuantosClicks() { 
+                        if(typeof(Storage) !== "undefined") { if (sessionStorage.cuentadeclicks) {
+                            //Si existe el contador, lo incrementamos en 30
+                            sessionStorage.cuentadeclicks = Number(sessionStorage. cuentadeclicks)+30; 
+                            //Realizamos conversión a número para evitar problemas. 
+                            //Los datos siempre se almacenan como cadena y requieren conversión. 
+                            } 
+                            else { 
+                                // Si no existe el contador, lo creamos 
+                                sessionStorage.cuentadeclicks = 1; 
+                            } 
+                            document.getElementById("elementoAlmacen2").innerHTML = "Has hecho clic en el botón: " 
+                            + sessionStorage. cuentadeclicks + " veces en esta sesión."; 
+                            } 
+                            else { 
+                                document.getElementById("elementoAlmacen2").innerHTML = "El navegador no soporta almacenamiento local"; 
+                            } 
+                        } 
+                    </script>
+            </div>
+        </div>
+
+        <div class="contenedorGrid2Utrherpab">
+            <div class="contenedorGrid2Utrherpab____UtrherpabHija1">
+                <button onclick="cuantosClicks()">
+                    <img src="img/Recurso5.png" class="contenedorGridUtrherpab__UtrherpabContenedor2ConBordeAzul__imgResponsivaUtrherpab">
+                </button>
+
+                <script> 
+                    function cuantosClicks() { 
+                        if(typeof(Storage) !== "undefined") { if (localStorage.cuentadeclicks) {
+                            //Si existe el contador, lo multiplicamos por 7
+                            localStorage.cuentadeclicks = Number(localStorage. cuentadeclicks)*7; 
+                            //Realizamos conversión a número para evitar problemas. 
+                            //Los datos siempre se almacenan como cadena y requieren conversión. 
+                            } 
+                            else { 
+                                // Si no existe el contador, lo creamos 
+                                localStorage.cuentadeclicks = 1; 
+                            } 
+                            document.getElementById("elementoAlmacen2").innerHTML = "Has hecho clic en el botón: " 
+                            + localStorage. cuentadeclicks + " veces en esta sesión."; 
+                            } 
+                            else { 
+                                document.getElementById("elementoAlmacen2").innerHTML = "El navegador no soporta almacenamiento local"; 
+                            } 
+                        } 
+                    </script>
+            </div>
+            <div class="contenedorGrid2Utrherpab____UtrherpabHija2">
+                <audio id="audio1" controls>
+                    <source src="img/Recurso7.mp3" type="audio/mpeg">
+                    <source src="img/Recurso7.ogg" type="audio/ogg">
+                    <source src="img/Recurso7.wav" type="audio/wav">
+                    Tu navegador no soporta esta etiqueta HTML5
+                </audio>
+                <div>
+                    <button class="centradoH" onclick="document.getElementById('audio1').play()">Reproducir el Audio</button> 
+                    
+                </div>
+            </div>
+            <div class="contenedorGrid2Utrherpab____UtrherpabHija3">
+                <a href="utr_her_pab_230120_ej2.html">Ejercicio-2_Utrherpab</a>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+
+    </footer>
+</body>
+
+</html>
